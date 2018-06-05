@@ -7,7 +7,7 @@ class MapRound extends Component {
     return (
       <div className="MapRound">
         <MapDisplay item={this.props.item} />
-        <Options />
+        <Options item={this.props.item} />
       </div>
     )
   }
