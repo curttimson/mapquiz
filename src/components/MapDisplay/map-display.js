@@ -27,8 +27,6 @@ class MapDisplay extends Component {
 
     let mapItem = this.props.item;
 
-    console.log(mapItem);
-
     let mapUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${mapItem.lat},${mapItem.long}
                     &zoom=6&size=${this.state.width}x400&maptype=roadmap
                     &markers=color:red|${mapItem.lat},${mapItem.long}&key=${MapConfig.API_KEY}&style=element:labels|visibility:off`;
