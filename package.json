@@ -1,10 +1,6 @@
 {
   "name": "mapquiz",
-<<<<<<< HEAD
   "version": "0.4.0",
-=======
-  "version": "0.3.0",
->>>>>>> master
   "private": true,
   "dependencies": {
     "react": "^16.4.0",
