@@ -25,7 +25,7 @@ class Map extends Component {
 
   render() {
 
-    let mapUrl = `https://maps.googleapis.com/maps/api/staticmap?scale=2&center=${this.props.location}
+    let mapUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${this.props.location}
                     &zoom=6&size=${this.state.width}x400&maptype=roadmap
                     &markers=color:red|${this.props.location}&key=${MapConfig.API_KEY}&style=element:labels|visibility:off`;
     
