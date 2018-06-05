@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MapConfig from '../config/MapConfig';
+import MapConfig from '../../config/MapConfig';
 import './Map.css';
 
 class Map extends Component {
@@ -25,9 +25,13 @@ class Map extends Component {
 
   render() {
 
-    let mapUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${this.props.location}
+    let mapItem = this.props.item;
+
+    console.log(mapItem);
+
+    let mapUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${mapItem.lat},${mapItem.long}
                     &zoom=6&size=${this.state.width}x400&maptype=roadmap
-                    &markers=color:red|${this.props.location}&key=${MapConfig.API_KEY}&style=element:labels|visibility:off`;
+                    &markers=color:red|${mapItem.lat},${mapItem.long}&key=${MapConfig.API_KEY}&style=element:labels|visibility:off`;
     
     return (
       <div className="Map">

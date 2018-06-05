@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
-import Map from './map/Map';
+import Map from './components/Map/map';
+import MapData from './mapdata';
 
 class App extends Component {
   render() {
 
-    let mapLocation = '51.2267133,-2.6730257';
+    let mapItem = MapData[0];
 
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Mapquiz</h1>
         </header>
-        <Map location={mapLocation} />
+        <Map item={mapItem} />
       </div>
     );
   }
