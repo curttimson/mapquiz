@@ -4,7 +4,7 @@ class Options extends Component {
   render(){
 
     let options = this.props.item.options.map(option => (
-      <li>
+      <li key={option}>
         {option}
       </li>
     ));
