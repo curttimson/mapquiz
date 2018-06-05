@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Map from './components/Map/map';
-import MapData from './mapdata';
+import MapRound from './components/MapRound/map-round';
+import MapData from './data/mapdata';
 
 class App extends Component {
   render() {
@@ -13,7 +13,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Mapquiz</h1>
         </header>
-        <Map item={mapItem} />
+        <MapRound item={mapItem} />
       </div>
     );
   }

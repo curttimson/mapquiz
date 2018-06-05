@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import MapConfig from '../../config/MapConfig';
 import './Map.css';
 
-class Map extends Component {
+class MapDisplay extends Component {
 
     constructor(props) {
         super(props);
@@ -41,4 +41,4 @@ class Map extends Component {
   }
 }
 
-export default Map;
+export default MapDisplay;
