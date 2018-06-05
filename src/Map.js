@@ -4,17 +4,13 @@ import MapConfig from './config/MapConfig';
 class Map extends Component {
   render() {
 
-    let mapUrl = `https://www.google.com/maps/embed/v1/place?key=${MapConfig.API_KEY}&q=Space+Needle,Seattle+WA`;
+    let mapUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${this.props.location}
+                    &zoom=6&size=400x400&maptype=roadmap
+                    &markers=color:red|${this.props.location}&key=${MapConfig.API_KEY}&style=element:labels|visibility:off`;
 
     return (
       <div className="Map">
-        <iframe
-          width="100%"
-          height="450"
-          frameborder="0"
-          src={mapUrl}
-          allowfullscreen>
-        </iframe>
+        <img src={mapUrl} />
       </div>
     );
   }
