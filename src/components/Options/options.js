@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './options.css';
 
+
 class Options extends Component {
 
   constructor(props) {
@@ -11,6 +12,7 @@ class Options extends Component {
   handleOptionChoice(e, option){
     e.preventDefault();
     console.log('Handle Option Choice', option);
+    this.props.onOptionSelected(option);
   }
 
   render(){
