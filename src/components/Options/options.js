@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './options.css';
-import MapService from '../../services/MapService';
+
 
 class Options extends Component {
 
@@ -12,9 +12,7 @@ class Options extends Component {
   handleOptionChoice(e, option){
     e.preventDefault();
     console.log('Handle Option Choice', option);
-    if(MapService.isCorrectOption(this.props.item, option)){
-      console.log('Correct option!');
-    }
+    this.props.onOptionSelected(option);
   }
 
   render(){

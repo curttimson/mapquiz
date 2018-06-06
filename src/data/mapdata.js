@@ -4,6 +4,12 @@ let MapData = [
     long: '-2.6730257',
     options: ['England', 'Scotland', 'France', 'Spain'],
     correctOption: 'England'
+  },
+  {
+    lat: '52.376316',
+    long: '4.896127',
+    options: ['Austria', 'Germany', 'Netherlands', 'Portugal'],
+    correctOption: 'Netherlands'
   }
 ];
 
