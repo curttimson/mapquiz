@@ -12,10 +12,8 @@ class MapRound extends Component {
 
   handleOptionSelected(optionSelected){
     console.log('map round handle option selected', optionSelected);
-    if(MapService.isCorrectOption(this.props.item, optionSelected)){
-      console.log('Map Round - Correct option!');
-    }
-    this.props.onRoundComplete();
+    let roundCorrect = MapService.isCorrectOption(this.props.item, optionSelected);
+    this.props.onRoundComplete(roundCorrect);
   }
 
   render(){

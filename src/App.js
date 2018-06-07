@@ -12,27 +12,38 @@ class App extends Component {
 
   componentWillMount(){
     this.setState({
-      mapItem: MapData[0]
+      currentRoundIndex: 0,
+      correctAnswers: 0
     });
   }
 
-  handleRoundComplete(){
+  handleRoundComplete(roundCorrect){
     console.log('app.js = handleroundcomplete');
-    this.setState({
-      mapItem: MapData[1]
-    });
+    
+    let state = this.state;
+
+    if(roundCorrect){
+      state.correctAnswers++;
+    }
+
+    state.currentRoundIndex++;
+
+    console.log('state', state);
+    this.setState(state);
   }
 
   render() {
 
     console.log('Render!');
 
+    let mapItem = MapData[this.state.currentRoundIndex];
+
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Mapquiz</h1>
         </header>
-        <MapRound item={this.state.mapItem} onRoundComplete={this.handleRoundComplete} />
+        <MapRound item={mapItem} onRoundComplete={this.handleRoundComplete} />
       </div>
     );
   }
