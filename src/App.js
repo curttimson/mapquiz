@@ -26,7 +26,12 @@ class App extends Component {
       state.correctAnswers++;
     }
 
-    state.currentRoundIndex++;
+    if (state.currentRoundIndex+1>=MapData.length){
+      alert(`You scored: ${state.correctAnswers}/${MapData.length}!`);
+    }
+    else{
+      state.currentRoundIndex++;
+    }
 
     console.log('state', state);
     this.setState(state);
