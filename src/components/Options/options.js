@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
 import './options.css';
 
 
@@ -19,7 +20,12 @@ class Options extends Component {
 
     let options = this.props.item.options.map(option => (
       <li key={option}>
-        <button onClick={(e) => this.handleOptionChoice(e, option)}>{option}</button>
+        <Button variant="contained"
+                color="primary"
+                size="large"
+                onClick={(e) => this.handleOptionChoice(e, option)}>
+          {option}
+        </Button>
       </li>
     ));
 
