@@ -23,10 +23,5 @@
 }
 
 .Options ul li button{
-  border-radius: 4px;
-  border:1px solid #ccc;
   width:80%;
-  padding:8px 0;
-  font-size: 1.6em;
-  background:#ccc;
 }
