@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.css';
 import MapRound from './components/MapRound/map-round';
+import Complete from './components/Complete/complete';
 import MapData from './data/mapdata';
 
 class App extends Component {
@@ -48,7 +50,14 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Mapquiz</h1>
         </header>
-        <MapRound item={mapItem} onRoundComplete={this.handleRoundComplete} />
+        <Router>
+          <Switch>
+              <Route exact path='/' render={() => (
+                <MapRound item={mapItem} onRoundComplete={this.handleRoundComplete} />
+              )}/>
+              <Route path='/complete' component={Complete}/>
+          </Switch>
+        </Router>
       </div>
     );
   }
