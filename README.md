@@ -1,1 +1,1 @@
-# mapquiz
+# MapQuiz
